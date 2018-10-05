@@ -20,8 +20,13 @@ export default class BodyComponent extends Component {
       <div className="Body">
         <Route path="/" exact component={HomeNav}/>
         <Route path="/" exact render={() => <HomeDisplay studentName={this.props.studentName}/>} />
-        <Route path="/enrollment" component={EnrollmentNav}/>
-        <Route path="/enrollment" component={EnrollmentDisplay}/>
+        <Route path="/enrollment" exact component={EnrollmentNav}/>
+        <Route path="/enrollment"  exact component={EnrollmentDisplay}/>
+        <Route path="/enrollment#/checklist" exact component={EnrollmentNav}/>
+        <Route path="/enrollment#/checklist"  exact component={EnrollmentDisplay}/>
+        <Route path="/enrollment#/payment" exact component={EnrollmentNav}/>
+        <Route path="/enrollment#/payment"  exact component={EnrollmentDisplay}/>
+
 
       </div>
       //Add display route here?
